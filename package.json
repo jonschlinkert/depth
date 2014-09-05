@@ -1,0 +1,48 @@
+{
+  "name": "depth",
+  "description": "Returns the depth of a file or directory, e.g. number of folders deep.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jonschlinkert/depth",
+  "author": {
+    "name": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jonschlinkert/depth.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jonschlinkert/depth/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jonschlinkert/depth/blob/master/LICENSE-MIT"
+    }
+  ],
+  "main": "index.js",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "devDependencies": {
+    "verb": ">= 0.2.6",
+    "mocha": "*"
+  },
+  "keywords": [
+    "dir",
+    "directories",
+    "directory",
+    "dirs",
+    "file",
+    "filepath",
+    "files",
+    "fp",
+    "path",
+    "paths",
+    "recurse",
+    "recursive"
+  ]
+}
