@@ -30,6 +30,19 @@ console.log(depth('./node_modules/verb/index.js'));
 //=> 2
 ```
 
+**fs**
+
+Check the file system first. Useful when dirs have names that start with a dot.
+
+```js
+console.log(depth('node_modules/.bin'));
+//=> 1
+
+// pass `true` to check the file system
+console.log(depth('node_modules/.bin', true));
+//=> 2
+```
+
 ## Author
 
 **Jon Schlinkert**
