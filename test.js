@@ -26,6 +26,22 @@ describe('depth', function () {
     depth('./node_modules/mocha/lib/browser').should.equal(4);
   });
 
+  it('should assume segments that start with a dot are files.', function () {
+    depth('./node_modules/.bin').should.equal(1);
+    depth('node_modules/.bin/').should.equal(1);
+    depth('/node_modules/.bin/').should.equal(1);
+    depth('//node_modules/.bin/').should.equal(1);
+    depth('./node_modules/.bin/').should.equal(1);
+  });
+
+  it('should assume segments that start with a dot are dirs, when `fs` is true.', function () {
+    depth('./node_modules/.bin', true).should.equal(2);
+    depth('node_modules/.bin/', true).should.equal(2);
+    depth('/node_modules/.bin/', true).should.equal(2);
+    depth('//node_modules/.bin/', true).should.equal(2);
+    depth('./node_modules/.bin/', true).should.equal(2);
+  });
+
   it('should calculate the depth of a file.', function () {
     depth('index.js').should.equal(0);
     depth('//index.js').should.equal(0);

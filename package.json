@@ -1,7 +1,7 @@
 {
   "name": "depth",
   "description": "Returns the depth of a file or directory, e.g. number of folders deep.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/jonschlinkert/depth",
   "author": {
     "name": "Jon Schlinkert",
@@ -28,7 +28,8 @@
     "test": "mocha -R spec"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "should": "^4.0.4"
   },
   "keywords": [
     "dir",
@@ -43,5 +44,8 @@
     "paths",
     "recurse",
     "recursive"
-  ]
+  ],
+  "dependencies": {
+    "is-directory": "^0.2.1"
+  }
 }
